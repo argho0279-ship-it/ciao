@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reviews | Ciao Dhaka</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#77302d",
+                        "inverse-surface": "#303030",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary-fixed": "#131f00",
+                        "surface-variant": "#e4e2e1",
+                        "on-surface-variant": "#44483b",
+                        "background": "#fcf9f8",
+                        "primary-fixed-dim": "#b3d17b",
+                        "inverse-primary": "#b3d17b",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed-dim": "#ffb3ad",
+                        "on-surface": "#1b1c1c",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#364e04",
+                        "tertiary": "#735c00",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#cca730",
+                        "on-secondary-fixed": "#3d0506",
+                        "surface-container": "#f0eded",
+                        "primary-container": "#3d550c",
+                        "primary-fixed": "#ceee94",
+                        "on-tertiary-container": "#4f3e00",
+                        "secondary": "#954742",
+                        "primary": "#293d00",
+                        "outline": "#75796a",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-on-surface": "#f3f0f0",
+                        "outline-variant": "#c5c8b7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#78302d",
+                        "on-primary-container": "#acc974",
+                        "surface-tint": "#4d661d",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-container": "#fe9b94",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "section-padding-mobile": "48px",
+                        "section-padding-desktop": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["DM Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .sophisticated-border {
+            border-color: rgba(149, 71, 66, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-slider {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #hamburger-btn.active span:first-child {
+            transform: translateY(6px) rotate(45deg);
+        }
+        #hamburger-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        #hamburger-btn.active span:last-child {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-b border-secondary/10 dark:border-secondary-fixed/10">
+  <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+    <a href="home.html" class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tighter">Ciao Dhaka</a>
+    <div class="hidden md:flex gap-8 items-center relative">
+      <a href="home.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">Home</a>
+      <a href="menu.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">Menu</a>
+      <a href="reviews.html" class="nav-link font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 active">Reviews</a>
+      <a href="about_us.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">About Us</a>
+      <div class="nav-slider absolute bottom-0 h-0.5 bg-primary dark:bg-primary-fixed-dim rounded-full"></div>
+    </div>
+    <button class="hidden md:inline-flex bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-80 active:scale-95 transition-all">Book a Table</button>
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2 relative z-10" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-primary dark:bg-primary-fixed-dim transition-all duration-300 origin-center"></span>
+      <span class="block w-6 h-0.5 bg-primary dark:bg-primary-fixed-dim transition-all duration-300"></span>
+      <span class="block w-6 h-0.5 bg-primary dark:bg-primary-fixed-dim transition-all duration-300 origin-center"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden absolute left-0 right-0 w-full bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md border-b border-secondary/10 dark:border-secondary-fixed/10 shadow-lg overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0">
+    <div class="px-gutter py-6 flex flex-col gap-4 max-w-container-max mx-auto">
+      <a href="home.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant py-2 border-b border-outline-variant/20 dark:border-secondary-fixed/20">Home</a>
+      <a href="menu.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant py-2 border-b border-outline-variant/20 dark:border-secondary-fixed/20">Menu</a>
+      <a href="reviews.html" class="nav-link font-label-md text-label-md text-primary dark:text-primary-fixed-dim py-2 border-b border-outline-variant/20 dark:border-secondary-fixed/20">Reviews</a>
+      <a href="about_us.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant py-2">About Us</a>
+    </div>
+  </div>
+</nav>
+<main class="pt-32 pb-section-padding-desktop max-w-container-max mx-auto px-gutter">
+<!-- Summary Header -->
+<header class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16 border-b border-outline-variant pb-12">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Guest Tales</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The heart of Ciao Dhaka beats through the words of our diners. Discover the experiences that define our modern trattoria.</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-4 mb-2">
+<span class="font-display-lg text-display-lg-mobile text-tertiary">4.3</span>
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">314 Verified Reviews</p>
+<a class="mt-6 inline-flex items-center gap-2 font-label-md text-label-md text-secondary border-b border-secondary pb-1 hover:opacity-70 transition-opacity" href="https://maps.google.com" target="_blank">
+                    Write a Review on Google Maps
+                    <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</header>
+<!-- Featured Highlights (Asymmetric Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-section-padding-desktop">
+<!-- Featured Review 1 -->
+<div class="md:col-span-7 bg-surface-container-low p-10 sophisticated-border border flex flex-col justify-between min-h-[400px]">
+<div>
+<div class="flex gap-1 text-tertiary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-headline-md text-headline-md italic text-on-surface mb-8">
+                        "Really happy with the Funghi Pizza. Dough was soft and sides were crunchy. Truffle oil makes the real difference."
+                    </blockquote>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center font-display-lg text-headline-sm text-secondary">T</div>
+<div>
+<cite class="not-italic font-label-md text-label-md font-bold block">Tahmeed Ornob</cite>
+<span class="text-label-md text-on-surface-variant">Dined October 2023</span>
+</div>
+</div>
+</div>
+<!-- Visual Break -->
+<div class="md:col-span-5 h-[400px] relative overflow-hidden group">
+<img alt="Artisanal Pizza" class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="A macro shot of a gourmet Funghi pizza on a rustic wooden table in a dimly lit, high-end Italian restaurant. The pizza features visible truffle oil glistening on earthy mushrooms, with a perfectly charred, airy crust. The lighting is warm and cinematic, suggesting a candlelit dinner atmosphere. Soft out-of-focus olive green and balsamic red tones in the background maintain the modern trattoria aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9hVg7JR-TKyl46sVvIV5pg8J__-xwaZ3iRroZ7sWEcPiCj_ZMntveWjVG1aMaGLwg5X9z_q2ZjjXxKc7h_GIRAiasMGTE9Q6fw3d1ybnCGw9nLpe3UpGXwTummMLzzrVYeO17mV7_gMii6bwqhXiZVExMaqYn8BRQ8w-FxUCNFKZPi6jJvl5rV_TPE276IEc-xJyqhO_nm5Xwt-RQbsBH7bjt1ufO9fZqguekROo9EHlZAm7108fk6McE_JhZU6si95DlUEBHsAvW"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<!-- Featured Review 2 -->
+<div class="md:col-span-4 h-[300px] relative overflow-hidden">
+<img alt="Pasta Dish" class="w-full h-full object-cover grayscale-[0.1]" data-alt="A top-down view of a perfectly plated fettuccine alfredo dish on a parchment-colored ceramic plate. The pasta is silky with a rich cream sauce and finely grated parmesan, garnished with a sprig of fresh basil. The setting is minimalist and elegant, with soft natural light coming from the side creating gentle shadows. The overall mood is sophisticated, clean, and authentic to high-end Italian cuisine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhnAenYHxQ6ryMuEBndNv2INnIvUuOS9xIOycO9la8EBmlWWJtRS00416Npc2gwazAzui0N9Pm1V-CBzNG0zH-RsgFW42NLLar2VeZJbxurhOA5F_Hl3fTc-SI4unkhn-vpVRvD0gUpoum9n4l-RGeWL4zfRskPOxtP93t25L1j1OF_KrW6QLunMzYPypISjG1_bjAzTKY-TyVzqe9J5SAWh7HMhkOe_soME1ljIzK2Y6I6Rc92rSPP17QiYISt3scRLzNS5ZEhHem"/>
+</div>
+<div class="md:col-span-8 bg-surface-container-highest p-10 flex flex-col justify-center">
+<div class="flex gap-1 text-tertiary mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<blockquote class="font-headline-sm text-headline-sm text-primary mb-6 leading-relaxed">
+                    "The food was actually pretty good. The pizza had a nice balance. It’s hard to find such authentic textures in the city."
+                </blockquote>
+<div class="flex items-center gap-3">
+<span class="w-8 h-px bg-outline"></span>
+<cite class="not-italic font-label-md text-label-md text-on-surface">Farhan Abrar</cite>
+</div>
+</div>
+</section>
+<!-- Topic Explorer (Bento Style) -->
+<section class="mb-section-padding-desktop">
+<h2 class="font-headline-md text-headline-md mb-8">What People Love</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 bg-surface-container p-6 flex flex-col justify-center sophisticated-border border">
+<span class="font-label-md text-label-md uppercase text-secondary tracking-widest mb-2">Signature Flavor</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">diavola pizza</h3>
+<p class="text-label-md text-on-surface-variant">Mentioned in 84 reviews for its perfect spice profile.</p>
+</div>
+<div class="bg-primary p-6 flex flex-col justify-between">
+<span class="material-symbols-outlined text-on-primary text-[32px]">restaurant</span>
+<h3 class="font-label-md text-label-md text-on-primary-container font-bold">fettuccine alfredo</h3>
+</div>
+<div class="bg-surface-container-high p-6 flex flex-col justify-between sophisticated-border border">
+<span class="material-symbols-outlined text-tertiary text-[32px]">cake</span>
+<h3 class="font-label-md text-label-md text-on-surface font-bold">tiramisu</h3>
+</div>
+</div>
+</section>
+<!-- Recent Reviews Feed -->
+<section class="border-t border-outline-variant pt-16">
+<div class="flex justify-between items-center mb-12">
+<h2 class="font-headline-md text-headline-md">Recent Visits</h2>
+<div class="flex gap-4">
+<button class="w-10 h-10 border border-outline flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 border border-outline flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Generic Review Card 1 -->
+<div class="flex flex-col gap-4">
+<div class="flex gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface">"The ambience takes you straight to a small street in Rome. Best sourdough crust in Dhaka by far."</p>
+<div class="mt-auto pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold">Rahat Mahbub</span>
+<span class="text-[12px] uppercase tracking-tighter text-on-surface-variant">2 days ago</span>
+</div>
+</div>
+<!-- Generic Review Card 2 -->
+<div class="flex flex-col gap-4">
+<div class="flex gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface">"Incredible service. The staff knew exactly which wine to pair with my Diavola. A bit crowded on weekends."</p>
+<div class="mt-auto pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold">Nusrat Jahan</span>
+<span class="text-[12px] uppercase tracking-tighter text-on-surface-variant">1 week ago</span>
+</div>
+</div>
+<!-- Generic Review Card 3 -->
+<div class="flex flex-col gap-4">
+<div class="flex gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface">"The Tiramisu was the highlight of my evening. Not too sweet, just the right amount of espresso soak."</p>
+<div class="mt-auto pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold">Sajid Hasan</span>
+<span class="text-[12px] uppercase tracking-tighter text-on-surface-variant">2 weeks ago</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start gap-unit bg-surface-container-highest dark:bg-inverse-surface border-t border-secondary/20 dark:border-secondary-fixed/20">
+<div class="flex flex-col gap-4 max-w-sm">
+<div class="font-display-lg-mobile text-display-lg-mobile text-secondary dark:text-secondary-fixed">Ciao Dhaka</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Ciao Dhaka. Authentic Italian Cuisine.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12 mt-8 md:mt-0">
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-widest">Connect</span>
+<a class="text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Foodpanda Order</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-widest">Legal</span>
+<a class="text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple atmospheric interaction
+        document.addEventListener('mousemove', (e) => {
+            const reviews = document.querySelectorAll('.sophisticated-border');
+            reviews.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (x > 0 && y > 0 && x < rect.width && y < rect.height) {
+                    card.style.borderColor = 'rgba(149, 71, 66, 0.3)';
+                    card.style.transition = 'border-color 0.3s ease';
+                } else {
+                    card.style.borderColor = 'rgba(149, 71, 66, 0.1)';
+                }
+            });
+        });
+
+        // Nav slider underline
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.nav-slider');
+            const activeLink = document.querySelector('.nav-link.active');
+            if (slider && activeLink) {
+                slider.style.width = activeLink.offsetWidth + 'px';
+                slider.style.transform = 'translateX(' + activeLink.offsetLeft + 'px)';
+            }
+        });
+
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.getElementById('hamburger-btn');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    if (mobileMenu.style.maxHeight === '0px' || !mobileMenu.style.maxHeight) {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    } else {
+                        mobileMenu.style.maxHeight = '0px';
+                    }
+                });
+            }
+        });
+    </script>
+</body></html>

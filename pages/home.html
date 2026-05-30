@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ciao Dhaka | Authentic Italian Soul</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary-fixed-variant": "#77302d",
+                    "inverse-surface": "#303030",
+                    "secondary-fixed": "#ffdad7",
+                    "on-primary-fixed": "#131f00",
+                    "surface-variant": "#e4e2e1",
+                    "on-surface-variant": "#44483b",
+                    "background": "#fcf9f8",
+                    "primary-fixed-dim": "#b3d17b",
+                    "inverse-primary": "#b3d17b",
+                    "on-background": "#1b1c1c",
+                    "secondary-fixed-dim": "#ffb3ad",
+                    "on-surface": "#1b1c1c",
+                    "surface-bright": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#364e04",
+                    "tertiary": "#735c00",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#cca730",
+                    "on-secondary-fixed": "#3d0506",
+                    "surface-container": "#f0eded",
+                    "primary-container": "#3d550c",
+                    "primary-fixed": "#ceee94",
+                    "on-tertiary-container": "#4f3e00",
+                    "secondary": "#954742",
+                    "primary": "#293d00",
+                    "outline": "#75796a",
+                    "surface-container-low": "#f6f3f2",
+                    "inverse-on-surface": "#f3f0f0",
+                    "outline-variant": "#c5c8b7",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-secondary-container": "#78302d",
+                    "on-primary-container": "#acc974",
+                    "surface-tint": "#4d661d",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-container": "#fe9b94",
+                    "tertiary-fixed": "#ffe088",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-tertiary-fixed-variant": "#574500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "section-padding-mobile": "48px",
+                    "section-padding-desktop": "80px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["DM Sans"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["DM Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["DM Sans"],
+                    "headline-sm": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .grain-overlay {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .dot-leader {
+            border-bottom: 1px dotted currentColor;
+            flex-grow: 1;
+            margin: 0 8px 5px;
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(252, 249, 248, 1) 0%, rgba(252, 249, 248, 0) 40%);
+        }
+        .sophisticated-border {
+            border: 1px solid rgba(149, 71, 66, 0.1);
+        }
+        .nav-slider {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #hamburger-btn.active span:first-child {
+            transform: translateY(6px) rotate(45deg);
+        }
+        #hamburger-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        #hamburger-btn.active span:last-child {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div class="fixed inset-0 grain-overlay z-[-1]"></div>
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-secondary/10">
+  <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+    <a href="home.html" class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tighter">Ciao Dhaka</a>
+    <div class="hidden md:flex gap-8 items-center relative">
+      <a href="home.html" class="nav-link font-label-md text-label-md text-primary hover:text-primary transition-colors duration-300 active">Home</a>
+      <a href="menu.html" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">Menu</a>
+      <a href="reviews.html" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">Reviews</a>
+      <a href="about_us.html" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">About Us</a>
+      <div class="nav-slider absolute bottom-0 h-0.5 bg-primary rounded-full"></div>
+    </div>
+    <button class="hidden md:inline-flex bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-80 active:scale-95 transition-all">Book a Table</button>
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2 relative z-10" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300 origin-center"></span>
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300"></span>
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300 origin-center"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden absolute left-0 right-0 w-full bg-surface/95 backdrop-blur-md border-b border-secondary/10 shadow-lg overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0">
+    <div class="px-gutter py-6 flex flex-col gap-4 max-w-container-max mx-auto">
+      <a href="home.html" class="font-label-md text-label-md text-primary py-2 border-b border-outline-variant/20">Home</a>
+      <a href="menu.html" class="font-label-md text-label-md text-on-surface-variant py-2 border-b border-outline-variant/20">Menu</a>
+      <a href="reviews.html" class="font-label-md text-label-md text-on-surface-variant py-2 border-b border-outline-variant/20">Reviews</a>
+      <a href="about_us.html" class="font-label-md text-label-md text-on-surface-variant py-2">About Us</a>
+    </div>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-end">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A top-down professional food photograph of a rustic wood-fired Diavola pizza with charred leopard-spotting on the crust, vibrant red tomato sauce, melted buffalo mozzarella, and spicy salami. The scene is set on a dark wooden table in a warm, candlelight atmosphere with scattered basil leaves and a dusting of flour. The lighting is moody and cinematic, emphasizing the tactile textures of the bubbly crust and the golden glow of a modern Italian trattoria." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl9GDtJaByacZjvhAYvlr8w_9rpkm9XFdzWxqFA0rVyLL88ARLj1qJJhJkB2M5wdO03nU_9aYZ2B8suvK7l5X3Cz79CO2FhU4GRvyCzBa4HuqfPNKJq9pBoIhyIwu2Qztc-PeT-ewso1rRwClxhahJ8gWpWiqqlry3bde865kRs9Wm6TpYuhix9CMRGzEh0XjQjVMPQttmZR3q70qW642Su44LpVtJ_qlRt8loayO2T-cTIBnng7c_8zdnKUFpzJxRcd5ooDFfRkWw"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-gutter max-w-container-max mx-auto w-full pb-section-padding-desktop">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">Authentic Italian Soul <br/>in the Heart of Dhaka</h1>
+<div class="flex flex-wrap gap-4 mt-8">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-full font-label-md text-label-md tracking-widest hover:brightness-105 transition-all">EXPLORE MENU</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-full font-label-md text-label-md tracking-widest hover:bg-primary/5 transition-all">BOOK A TABLE</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Welcome Section -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 relative">
+<div class="sophisticated-border p-3 rotate-[-2deg] bg-surface-container-low">
+<img class="w-full aspect-[4/5] object-cover" data-alt="A close-up, high-detail photograph of a chef's hands dusting flour over a fresh mound of pasta dough on a marble countertop. The image is captured with a shallow depth of field, highlighting the fine texture of the flour and the rustic, organic feel of the kitchen. The lighting is soft and warm, reminiscent of a Mediterranean morning, emphasizing the artisanal craft and authenticity of a high-end Italian restaurant experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7An0JTnm82e5CYRqvqfyhUN4Rs-oxkfWzOVfRYtQufasuOVtgIbPZxRJmCTDk_sQMCJ3FpIw3s1fKbVgJ0ZOeak2yK7ZU_M1Ed9ohDfO9dyUl-gknjxEydNEJQJgVxN-t8j-m9-89VP-EZ1aS-KVuQkahwJySZpokwV2Hffk8rcd1XXK1C05pD2GEdn1_I4PypDvv-o0u1hwS3k2JY7DMTCY1KFYvh9Lcg31LN3U_1JnCSqt18gpffWasRyRrFVIzy4qV2vNBwSo"/>
+</div>
+</div>
+<div class="md:col-span-7">
+<span class="text-tertiary font-label-md text-label-md tracking-[0.2em] mb-4 block">BENVENUTI</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">A Journey Through Italy's Kitchen</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                At Ciao Dhaka, we don't just cook; we tell stories through flavors. Our dough is fermented for 48 hours, our tomatoes are sourced from the volcanic soils of Campania, and our passion is purely Italian. Experience the true essence of a Trattoria where every bite of pasta and every slice of pizza is a tribute to Rome, Naples, and the culinary soul of Italy.
+            </p>
+<div class="h-[1px] w-24 bg-secondary/30"></div>
+</div>
+</section>
+<!-- Featured Items (Asymmetric Layout) -->
+<section class="bg-surface-container-low py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Chef's Selections</h2>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2">HAND-CRAFTED DAILY</p>
+</div>
+<div class="hidden md:block h-[1px] flex-grow mx-12 bg-outline-variant/30"></div>
+<a class="text-primary font-label-md text-label-md underline underline-offset-8" href="#">VIEW FULL MENU</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Item 1 -->
+<div class="flex flex-col gap-6 group">
+<div class="overflow-hidden bg-surface-dim">
+<img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An editorial style food photograph of a Diavola pizza served on a rustic ceramic plate. The spicy salami curls are glistening with oil, and fresh basil leaves provide a pop of green. The background is a blurred view of a cozy restaurant interior with warm lighting. The aesthetic is clean, sophisticated, and appetizing, emphasizing the premium ingredients and traditional wood-fire baking techniques." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGi7i8BtJOegdWczvcw2ZJrYF5z5-9KQcmZQ_bTRP7312LgtUfXJcPPRabnd416QlfgIBooDZbQ42O-dEAeOtUv7LDsanp2UtAtrnueVw0W2mrb-mzbHynQHFWsw_TQYFKugXEtM9USGu5kYZASFoOxnLLkkzhFCqoZPlM6piab17CN5cbv4mJSJH4KLmghjxBPn_rDRSs05Z3fmNRv1rRcJscWgCcXId6_g7CGF8F_5YWGFRKUZLYtccYrV4cCw9P6lXJ2-CuoLe8"/>
+</div>
+<div>
+<div class="flex items-end justify-between">
+<h3 class="font-headline-sm text-headline-sm">Diavola Pizza</h3>
+<div class="dot-leader text-outline-variant"></div>
+<span class="font-headline-sm text-headline-sm text-tertiary">370 BDT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-md">Spicy Italian salami, San Marzano tomatoes, fresh mozzarella, chili oil, and cracked black pepper.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-6 group mt-0 md:mt-24">
+<div class="overflow-hidden bg-surface-dim">
+<img class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated dessert presentation of an authentic Italian Tiramisu. The layers of mascarpone cream and espresso-soaked ladyfingers are dusted with a heavy layer of dark cocoa powder. The dessert is served in a minimalist glass bowl, highlighting the elegant layers. The scene is lit by soft, warm light, creating a luxurious and indulgent mood consistent with high-end dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy0VRiC0xnSUvmTQBGjyRRamgtxdWx31iSW-WS5p_JHmO1LJJ_oPflk3XM58SFQwcpKmonc1wIwafWKk9FmrLHF7himuQLJh7rhtNDqYiMOKa09vK9phNIxbalaDm4Q9SXDUGK-f2I_gt6OOHp2_AIJqhMTL6BqbjtpZ_oI2fqupir14kfhEXuJJbDMtkGKI5O-D9kQrTBBSw_AVh4SMpMvT8VrkFabL6Pk9-frOoyQSjueFA2h201egJKnnGi-gQdOyqXTdmrjnYP"/>
+</div>
+<div>
+<div class="flex items-end justify-between">
+<h3 class="font-headline-sm text-headline-sm">Authentic Tiramisu</h3>
+<div class="dot-leader text-outline-variant"></div>
+<span class="font-headline-sm text-headline-sm text-tertiary">450 BDT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-md">Mascarpone cream, espresso-soaked savoiardi, and a heavy dusting of premium Dutch cocoa.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section (Bento Inspired) -->
+<section class="py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 relative sophisticated-border p-6 flex flex-col justify-end overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover z-0 group-hover:scale-110 transition-transform duration-1000" data-alt="The interior of Ciao Dhaka restaurant showing a cozy Trattoria vibe. Exposed brick walls, warm pendant lighting with amber bulbs, and dark wood furniture create an intimate atmosphere. The setting is refined yet welcoming, with white tablecloths and fine-line Italian sketches on the walls, capturing a perfect blend of rustic tradition and urban elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBg5zU_-IR6uGlwlzZCTtRVZrAaGBko8vBKeRW8E05ntBrG5ikjoJ3VnBRBvp-g7aOKAdGmnhjyzRVtvNsVSU_MKvQ35EJQ_cq-TnGSxpugY_9jA1GePb1HbbdzH0z3Qb3jTCSQcp6cZrMLFka1T9cwrpFSUIw_HLULpPlbYJMUjHXhUYYAwLVPUU9390gVqmAvS8ZgCORG82pDboBwEKbuADt_SYegn71KjfZNJokVim6s5jNZga2JQ_R5UIe0ZQ9m9Ldb_DoUfzS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<div class="relative z-20 text-white">
+<h3 class="font-headline-md text-headline-md mb-2">The Trattoria Vibe</h3>
+<p class="font-body-md text-body-md opacity-90">An intimate space designed for conversation, laughter, and the simple joy of a shared meal.</p>
+</div>
+</div>
+<div class="md:col-span-2 bg-primary text-on-primary p-12 flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Pasta Fatta in Casa</h3>
+<p class="font-body-md text-body-md opacity-80 italic">"Our pasta is handmade every morning using traditional bronze dies for the perfect sauce-gripping texture."</p>
+</div>
+<div class="md:col-span-1 bg-secondary text-on-secondary p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-3xl">local_fire_department</span>
+<p class="font-label-md text-label-md tracking-widest font-bold">WOOD-FIRED AUTHENTICITY</p>
+</div>
+<div class="md:col-span-1 bg-tertiary text-on-tertiary p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-3xl">wine_bar</span>
+<p class="font-label-md text-label-md tracking-widest font-bold">REFINED PAIRINGS</p>
+</div>
+</div>
+</section>
+<!-- Location/Hours Teaser -->
+<section class="border-y border-outline-variant/20 py-20 px-gutter bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<h4 class="font-headline-sm text-headline-sm">Find Us</h4>
+<p class="text-on-surface-variant font-body-md">House 18, Road 10A,<br/>Dhaka 1212</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<h4 class="font-headline-sm text-headline-sm">Opening Hours</h4>
+<p class="text-on-surface-variant font-body-md">Daily: 12:00 PM – 10:30 PM<br/>Kitchen closes at 10:00 PM</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">contact_support</span>
+<h4 class="font-headline-sm text-headline-sm">Reservations</h4>
+<p class="text-on-surface-variant font-body-md">+880 1712 345 678<br/>ciao@dhaka.com</p>
+</div>
+</div>
+<div class="mt-16 w-full h-[400px] grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A stylized, minimalist map highlighting the Banani area of Dhaka. The map uses a sophisticated color palette of parchment, olive green, and charcoal, with a gold pin marking the location of Ciao Dhaka. The surrounding streets are rendered in clean, fine lines consistent with a luxury boutique hotel or high-end restaurant branding." data-location="Dhaka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSLch_OCN1b97h8e26Zo3G9J6wGcmwVnOlFisTV6dYsgRzMOiPIfWFwT7DoVwwK7mbGaCXV0Sp4ql5HetXaXp3v9IZRf6ObUbmfKbUvEq0wa5WEc8ThdXqcv49IBaZMLB_1x75e61RM51e-gi9yeqtMzOGBM_z6j32tseWm_9YcgGeJQZEx5f1mQLQb53PvSy-9_L2NMHgs9EmPLa50LHidnAU6jH84hDILxbgE6JPlVvnzpgZuMH7EYvy39jvmzmW9E7y8JDS7o4T"/>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start gap-unit bg-surface-container-highest">
+<div class="flex flex-col gap-6">
+<div class="font-display-lg-mobile text-display-lg-mobile text-secondary">Ciao Dhaka</div>
+<p class="text-on-surface-variant max-w-xs font-body-md">© 2024 Ciao Dhaka. Authentic Italian Cuisine.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-8 md:mt-0">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-secondary font-bold">DINING</span>
+<a class="text-on-surface-variant hover:underline decoration-tertiary underline-offset-4 transition-all" href="#">Contact Us</a>
+<a class="text-on-surface-variant hover:underline decoration-tertiary underline-offset-4 transition-all" href="#">Foodpanda Order</a>
+<a class="text-on-surface-variant hover:underline decoration-tertiary underline-offset-4 transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-secondary font-bold">SOCIAL</span>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary/20 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full border border-secondary/20 flex items-center justify-center hover:bg-secondary hover:text-white transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and scroll effects
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav > div');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-sm');
+            }
+        });
+
+        // Atmospheric parallax on hero
+        document.addEventListener('mousemove', (e) => {
+            const amount = 20;
+            const x = (e.clientX / window.innerWidth - 0.5) * amount;
+            const y = (e.clientY / window.innerHeight - 0.5) * amount;
+            const heroImg = document.querySelector('.hero-gradient').previousElementSibling;
+            heroImg.style.transform = `scale(1.1) translate(${x}px, ${y}px)`;
+        });
+
+        // Nav slider underline
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.nav-slider');
+            const activeLink = document.querySelector('.nav-link.active');
+            if (slider && activeLink) {
+                slider.style.width = activeLink.offsetWidth + 'px';
+                slider.style.transform = 'translateX(' + activeLink.offsetLeft + 'px)';
+            }
+        });
+
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.getElementById('hamburger-btn');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    if (mobileMenu.style.maxHeight === '0px' || !mobileMenu.style.maxHeight) {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    } else {
+                        mobileMenu.style.maxHeight = '0px';
+                    }
+                });
+            }
+        });
+    </script>
+</body></html>

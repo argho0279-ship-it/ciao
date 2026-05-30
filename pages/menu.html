@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu | Ciao Dhaka Authentic Italian</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+        .dot-leader::after {
+            content: "";
+            flex-grow: 1;
+            border-bottom: 1px dotted #75796a;
+            margin: 0 12px;
+            margin-bottom: 5px;
+        }
+        .menu-category-active {
+            color: #293d00;
+            border-bottom: 2px solid #293d00;
+        }
+        .nav-slider {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #hamburger-btn.active span:first-child {
+            transform: translateY(6px) rotate(45deg);
+        }
+        #hamburger-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        #hamburger-btn.active span:last-child {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#77302d",
+                        "inverse-surface": "#303030",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary-fixed": "#131f00",
+                        "surface-variant": "#e4e2e1",
+                        "on-surface-variant": "#44483b",
+                        "background": "#fcf9f8",
+                        "primary-fixed-dim": "#b3d17b",
+                        "inverse-primary": "#b3d17b",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed-dim": "#ffb3ad",
+                        "on-surface": "#1b1c1c",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#364e04",
+                        "tertiary": "#735c00",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#cca730",
+                        "on-secondary-fixed": "#3d0506",
+                        "surface-container": "#f0eded",
+                        "primary-container": "#3d550c",
+                        "primary-fixed": "#ceee94",
+                        "on-tertiary-container": "#4f3e00",
+                        "secondary": "#954742",
+                        "primary": "#293d00",
+                        "outline": "#75796a",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-on-surface": "#f3f0f0",
+                        "outline-variant": "#c5c8b7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#78302d",
+                        "on-primary-container": "#acc974",
+                        "surface-tint": "#4d661d",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-container": "#fe9b94",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "section-padding-mobile": "48px",
+                        "section-padding-desktop": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["DM Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md paper-texture">
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-b border-secondary/10 dark:border-secondary-fixed/10">
+  <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+    <a href="home.html" class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim tracking-tighter">Ciao Dhaka</a>
+    <div class="hidden md:flex gap-8 items-center relative">
+      <a href="home.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">Home</a>
+      <a href="menu.html" class="nav-link font-label-md text-label-md text-primary dark:text-primary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 active">Menu</a>
+      <a href="reviews.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">Reviews</a>
+      <a href="about_us.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">About Us</a>
+      <div class="nav-slider absolute bottom-0 h-0.5 bg-primary dark:bg-primary-fixed-dim rounded-full"></div>
+    </div>
+    <button class="hidden md:inline-flex bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-80 active:scale-95 transition-all">Book a Table</button>
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2 relative z-10" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-primary dark:bg-primary-fixed-dim transition-all duration-300 origin-center"></span>
+      <span class="block w-6 h-0.5 bg-primary dark:bg-primary-fixed-dim transition-all duration-300"></span>
+      <span class="block w-6 h-0.5 bg-primary dark:bg-primary-fixed-dim transition-all duration-300 origin-center"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden absolute left-0 right-0 w-full bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md border-b border-secondary/10 dark:border-secondary-fixed/10 shadow-lg overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0">
+    <div class="px-gutter py-6 flex flex-col gap-4 max-w-container-max mx-auto">
+      <a href="home.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant py-2 border-b border-outline-variant/20 dark:border-secondary-fixed/20">Home</a>
+      <a href="menu.html" class="nav-link font-label-md text-label-md text-primary dark:text-primary-fixed-dim py-2 border-b border-outline-variant/20 dark:border-secondary-fixed/20">Menu</a>
+      <a href="reviews.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant py-2 border-b border-outline-variant/20 dark:border-secondary-fixed/20">Reviews</a>
+      <a href="about_us.html" class="nav-link font-label-md text-label-md text-on-surface-variant dark:text-surface-variant py-2">About Us</a>
+    </div>
+  </div>
+</nav>
+<main class="pt-32 pb-section-padding-desktop px-gutter max-w-container-max mx-auto">
+<!-- Hero Header -->
+<header class="text-center mb-16">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Our Menu</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">
+                A journey through the flavors of Italy, prepared with passion and the finest seasonal ingredients.
+            </p>
+</header>
+<!-- Category Quick Nav -->
+<div class="sticky top-20 z-40 bg-background/80 backdrop-blur-sm py-6 mb-12 flex justify-center gap-6 md:gap-12 overflow-x-auto no-scrollbar border-b border-outline-variant/30">
+<a class="font-label-md text-label-md whitespace-nowrap hover:text-primary transition-colors" href="#antipasti">STARTERS</a>
+<a class="font-label-md text-label-md whitespace-nowrap hover:text-primary transition-colors" href="#pizza">PIZZA</a>
+<a class="font-label-md text-label-md whitespace-nowrap hover:text-primary transition-colors" href="#pasta">PASTA</a>
+<a class="font-label-md text-label-md whitespace-nowrap hover:text-primary transition-colors" href="#secondi">MAINS</a>
+<a class="font-label-md text-label-md whitespace-nowrap hover:text-primary transition-colors" href="#dolci">DESSERTS</a>
+<a class="font-label-md text-label-md whitespace-nowrap hover:text-primary transition-colors" href="#bevande">BEVERAGES</a>
+</div>
+<!-- Menu Sections -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Side Image Accent -->
+<div class="hidden lg:block lg:col-span-4">
+<div class="sticky top-48 space-y-8">
+<div class="aspect-[3/4] overflow-hidden rounded-lg border border-secondary/10">
+<img alt="Italian Culinary Craft" class="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-700" data-alt="A cinematic, warm-toned close-up of a rustic Italian kitchen scene. Fresh basil leaves, a dusting of flour on a dark wood table, and a glass of red wine. The lighting is soft and moody, mimicking a candlelit trattoria evening. The overall aesthetic is minimalist, sophisticated, and earthy, utilizing a color palette of olive green, deep red, and creamy parchment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAT9f-JcqCNIlJN0r_bl4Y19mgw-vOI6xZImAK4-dtcfSHdjGTOFI_Tdzsh8Ir3ND9KkhMK4k3VznSw4kF7QABZNkxLZgjLJ9c9pfXm1xNxRVcLVtx4yuHTvHY_oyHty0_txxVh-RJbLWjtTq-OX9YWqkNTmv7iRXQSYZNAA3DdBe2FEN0NND6NitM3q1dCnPaJ5CuwdatRbIgr6ShfJfjT6cdRGKpLdwwygWwVYVm1a3JmvjtBQtraoVar23VrpfItkoPioq4YCIo"/>
+</div>
+<div class="p-8 border border-primary/10 bg-surface-container-low rounded-lg italic text-on-surface-variant">
+                        "Mangia bene, ridi spesso, ama molto."
+                        <span class="block mt-2 font-bold not-italic text-primary text-sm">— The Ciao Dhaka Philosophy</span>
+</div>
+</div>
+</div>
+<!-- Menu Content -->
+<div class="lg:col-span-8 space-y-24">
+<!-- Antipasti Section -->
+<section class="scroll-mt-40" id="antipasti">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-secondary">Starters</h2>
+<div class="h-px flex-grow bg-secondary/20"></div>
+<span class="font-label-md text-label-md text-outline italic">Salads &amp; Starters</span>
+</div>
+<div class="grid gap-y-8">
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Bruschetta Al Pomodoro</span>
+<span class="font-body-md text-body-md text-primary font-bold">280</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Toasted rustic bread topped with marinated vine-ripened tomatoes, garlic, and fresh basil.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Caprese Classica</span>
+<span class="font-body-md text-body-md text-primary font-bold">420</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Buffalo mozzarella, heirloom tomatoes, and aged balsamic glaze.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Caesar Salad</span>
+<span class="font-body-md text-body-md text-primary font-bold">390</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Crisp romaine, sourdough croutons, shaved parmesan, and our signature dressing.</p>
+</div>
+</div>
+</section>
+<!-- Pizza Section -->
+<section class="scroll-mt-40" id="pizza">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-secondary">Pizza</h2>
+<div class="h-px flex-grow bg-secondary/20"></div>
+<span class="font-label-md text-label-md text-outline italic">Wood-Fired Pizza</span>
+</div>
+<div class="grid gap-y-8">
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Margherita</span>
+<span class="font-body-md text-body-md text-primary font-bold">320</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">San Marzano tomato, fior di latte, fresh basil, and extra virgin olive oil.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Diavola</span>
+<span class="font-body-md text-body-md text-primary font-bold">370</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Spicy salami calabrese, tomato, mozzarella, and chili flakes.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Prosciutto e Funghi</span>
+<span class="font-body-md text-body-md text-primary font-bold">410</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Cured Italian ham, roasted mushrooms, tomato, and mozzarella.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Pepperoni</span>
+<span class="font-body-md text-body-md text-primary font-bold">380</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Premium beef pepperoni, mozzarella, and house-made tomato sauce.</p>
+</div>
+</div>
+</section>
+<!-- Primi / Pasta Section -->
+<section class="scroll-mt-40" id="pasta">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-secondary">Pasta</h2>
+<div class="h-px flex-grow bg-secondary/20"></div>
+<span class="font-label-md text-label-md text-outline italic">Pasta &amp; Gnocchi</span>
+</div>
+<div class="grid gap-y-8">
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Spaghetti Bolognese</span>
+<span class="font-body-md text-body-md text-primary font-bold">450</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Slow-cooked ragù of beef and tomatoes with herbs and parmesan.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Fettuccine Alfredo</span>
+<span class="font-body-md text-body-md text-primary font-bold">420</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Ribbons of pasta in a rich, creamy butter and parmesan sauce.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Pasta Carbonara</span>
+<span class="font-body-md text-body-md text-primary font-bold">440</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Guanciale, egg yolk, pecorino romano, and black pepper.</p>
+</div>
+</div>
+</section>
+<!-- Secondi / Main Section -->
+<section class="scroll-mt-40" id="secondi">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-secondary">Mains</h2>
+<div class="h-px flex-grow bg-secondary/20"></div>
+<span class="font-label-md text-label-md text-outline italic">Main Dishes</span>
+</div>
+<div class="grid gap-y-12">
+<div class="group">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Grilled Chicken Al Limone</span>
+<span class="font-body-md text-body-md text-primary font-bold">580</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Organic chicken breast marinated in lemon and rosemary, served with seasonal greens.</p>
+</div>
+<div class="group">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Chicken Parmigiana</span>
+<span class="font-body-md text-body-md text-primary font-bold">620</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Breaded chicken cutlet topped with melted mozzarella and house pomodoro.</p>
+</div>
+<div class="group">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Beef Tenderloin</span>
+<span class="font-body-md text-body-md text-primary font-bold">950</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">8oz premium cut with red wine reduction and truffle mashed potatoes.</p>
+</div>
+</div>
+</section>
+<!-- Dolci / Desserts Section -->
+<section class="scroll-mt-40" id="dolci">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-secondary">Desserts</h2>
+<div class="h-px flex-grow bg-secondary/20"></div>
+<span class="font-label-md text-label-md text-outline italic">Desserts</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Tiramisu</span>
+<span class="font-body-md text-body-md text-primary font-bold">350</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Ladyfingers soaked in espresso, layered with mascarpone.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Panna Cotta</span>
+<span class="font-body-md text-body-md text-primary font-bold">320</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Vanilla bean cream with a forest berry coulis.</p>
+</div>
+<div class="flex flex-col">
+<div class="flex items-end justify-between dot-leader">
+<span class="font-headline-sm text-headline-sm">Gelato Artigianale</span>
+<span class="font-body-md text-body-md text-primary font-bold">280</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Daily selection of house-made Italian ice cream.</p>
+</div>
+</div>
+</section>
+<!-- Bevande / Beverages Section -->
+<section class="scroll-mt-40" id="bevande">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-headline-md text-headline-md text-secondary">Beverages</h2>
+<div class="h-px flex-grow bg-secondary/20"></div>
+<span class="font-label-md text-label-md text-outline italic">Coffee &amp; Juices</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-4 border-b border-primary/20 pb-2">COFFEE</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-end dot-leader"><span class="font-body-md">Espresso Solo</span> <span class="font-bold">120</span></li>
+<li class="flex justify-between items-end dot-leader"><span class="font-body-md">Double Espresso</span> <span class="font-bold">180</span></li>
+<li class="flex justify-between items-end dot-leader"><span class="font-body-md">Caffè Latte</span> <span class="font-bold">220</span></li>
+<li class="flex justify-between items-end dot-leader"><span class="font-body-md">Cappuccino</span> <span class="font-bold">240</span></li>
+</ul>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-primary mb-4 border-b border-primary/20 pb-2">FRESH JUICES</h3>
+<ul class="space-y-4">
+<li class="flex justify-between items-end dot-leader"><span class="font-body-md">Spremuta d'Arancia</span> <span class="font-bold">250</span></li>
+<li class="flex justify-between items-end dot-leader"><span class="font-body-md">Lemon &amp; Mint Cooler</span> <span class="font-bold">210</span></li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start gap-unit bg-surface-container-highest dark:bg-inverse-surface border-t border-secondary/20 dark:border-secondary-fixed/20">
+<div class="flex flex-col gap-4">
+<div class="font-display-lg-mobile text-display-lg-mobile text-secondary dark:text-secondary-fixed">Ciao Dhaka</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 Ciao Dhaka. Authentic Italian Cuisine. Taste the tradition of Italy in every bite.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-12 mt-8 md:mt-0">
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-widest">Navigation</span>
+<a class="font-label-md text-label-md text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Contact Us</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Foodpanda Order</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-widest">Connect</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Order Button (FAB) -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
+</button>
+<script>
+        // Simple micro-interaction for category highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('div.sticky a');
+
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 250)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('menu-category-active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('menu-category-active');
+                }
+            });
+        });
+
+        // Nav slider underline
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.nav-slider');
+            const activeLink = document.querySelector('.nav-link.active');
+            if (slider && activeLink) {
+                slider.style.width = activeLink.offsetWidth + 'px';
+                slider.style.transform = 'translateX(' + activeLink.offsetLeft + 'px)';
+            }
+        });
+
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.getElementById('hamburger-btn');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    if (mobileMenu.style.maxHeight === '0px' || !mobileMenu.style.maxHeight) {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    } else {
+                        mobileMenu.style.maxHeight = '0px';
+                    }
+                });
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Ciao Dhaka - Modern Trattoria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#77302d",
+                        "inverse-surface": "#303030",
+                        "secondary-fixed": "#ffdad7",
+                        "on-primary-fixed": "#131f00",
+                        "surface-variant": "#e4e2e1",
+                        "on-surface-variant": "#44483b",
+                        "background": "#fcf9f8",
+                        "primary-fixed-dim": "#b3d17b",
+                        "inverse-primary": "#b3d17b",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed-dim": "#ffb3ad",
+                        "on-surface": "#1b1c1c",
+                        "surface-bright": "#fcf9f8",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#364e04",
+                        "tertiary": "#735c00",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#cca730",
+                        "on-secondary-fixed": "#3d0506",
+                        "surface-container": "#f0eded",
+                        "primary-container": "#3d550c",
+                        "primary-fixed": "#ceee94",
+                        "on-tertiary-container": "#4f3e00",
+                        "secondary": "#954742",
+                        "primary": "#293d00",
+                        "outline": "#75796a",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-on-surface": "#f3f0f0",
+                        "outline-variant": "#c5c8b7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#78302d",
+                        "on-primary-container": "#acc974",
+                        "surface-tint": "#4d661d",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-container": "#fe9b94",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#574500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "section-padding-mobile": "48px",
+                        "section-padding-desktop": "80px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["DM Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "headline-sm": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+        .parchment-bg {
+            background-color: #fcf9f8;
+            position: relative;
+        }
+        .sophisticated-border {
+            border: 1px solid rgba(149, 71, 66, 0.1);
+        }
+        .dot-leader::after {
+            content: "";
+            flex-grow: 1;
+            border-bottom: 1px dotted #75796a;
+            margin: 0 8px;
+            margin-bottom: 5px;
+        }
+        .nav-slider {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #hamburger-btn.active span:first-child {
+            transform: translateY(6px) rotate(45deg);
+        }
+        #hamburger-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        #hamburger-btn.active span:last-child {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<div class="grain-overlay"></div>
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-secondary/10">
+  <div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+    <a href="home.html" class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tighter">Ciao Dhaka</a>
+    <div class="hidden md:flex gap-8 items-center relative">
+      <a href="home.html" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">Home</a>
+      <a href="menu.html" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">Menu</a>
+      <a href="reviews.html" class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300">Reviews</a>
+      <a href="about_us.html" class="nav-link font-label-md text-label-md text-primary hover:text-primary transition-colors duration-300 active">About Us</a>
+      <div class="nav-slider absolute bottom-0 h-0.5 bg-primary rounded-full"></div>
+    </div>
+    <button class="hidden md:inline-flex bg-tertiary-container text-on-tertiary-container px-6 py-2 rounded-full font-label-md text-label-md hover:opacity-80 active:scale-95 transition-all">Book a Table</button>
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2 relative z-10" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300 origin-center"></span>
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300"></span>
+      <span class="block w-6 h-0.5 bg-primary transition-all duration-300 origin-center"></span>
+    </button>
+  </div>
+  <div id="mobile-menu" class="md:hidden absolute left-0 right-0 w-full bg-surface/95 backdrop-blur-md border-b border-secondary/10 shadow-lg overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0">
+    <div class="px-gutter py-6 flex flex-col gap-4 max-w-container-max mx-auto">
+      <a href="home.html" class="font-label-md text-label-md text-on-surface-variant py-2 border-b border-outline-variant/20">Home</a>
+      <a href="menu.html" class="font-label-md text-label-md text-on-surface-variant py-2 border-b border-outline-variant/20">Menu</a>
+      <a href="reviews.html" class="font-label-md text-label-md text-on-surface-variant py-2 border-b border-outline-variant/20">Reviews</a>
+      <a href="about_us.html" class="font-label-md text-label-md text-primary py-2">About Us</a>
+    </div>
+  </div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-padding-desktop flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<span class="font-label-md text-label-md text-tertiary uppercase tracking-widest block mb-4">Our Heritage</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">From Naples to the Heart of Dhaka</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                    Ciao Dhaka was born from a singular passion: to redefine the pizza experience in our city. We didn't just want to serve food; we wanted to transport our guests to a rustic corner of Tuscany, where time slows down and flavor takes center stage.
+                </p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-md text-label-md">Authentic Wood-Fired Tradition</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">local_pizza</span>
+<span class="font-label-md text-label-md">Hand-Stretched Daily Dough</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<div class="relative group">
+<div class="absolute -inset-4 border border-secondary/10 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+<img alt="Ciao Dhaka Interior" class="w-full aspect-[4/5] object-cover rounded shadow-sm filter grayscale-[20%] sepia-[10%]" data-alt="A warm, atmospheric interior shot of a modern Italian trattoria in Dhaka. The lighting is low and golden, mimicking candlelight, reflecting off polished wooden tables and minimalist leather chairs. In the background, a large copper wood-fired pizza oven glows warmly, creating a cozy and upscale atmosphere with hints of olive green and balsamic red accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGL2rkOwtg5rGtWWVl0xf22MlSd-9uvEoHe8pXGGFWIgCP0fWSYRBCMOCaCj8UmN3ktyPiJZaujP5nJL0ayG0r2AJWlRwAAvbBTQJuy302mepFRnGNjRzXON1tU1suZWOaV3eH-Hp0le-WRr41UL6lnENBW7GdOk6wAbmyFwL1PQAZBVHEOY2kzzdPoikftSPy6pXAorVF4YiBw42Ex-wCw5SBGO177ucbvJDt_HzlOhV-KVb3O_Z3wi1pKgzB_wPZraRZeW9dC4u2"/>
+</div>
+</div>
+</section>
+<!-- Ingredients Bento Grid -->
+<section class="bg-surface-container-low py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary">The Alchemy of Ingredients</h2>
+<div class="h-1 w-20 bg-tertiary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Truffle Card -->
+<div class="md:col-span-8 sophisticated-border bg-surface p-12 flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="w-full md:w-1/2">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-4">Golden Truffle Essence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                We source our truffle oil directly from the Umbria region. This liquid gold adds a complex, earthy dimension to our signature pies, creating a sensory bridge between Italian soil and Dhaka's vibrant palate.
+                            </p>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:gap-4 transition-all" href="https://www.foodpanda.com.bd" target="_blank">
+                                Try it on our Tartufata <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2">
+<img alt="Truffle Oil" class="w-full aspect-square object-cover rounded" data-alt="Close-up macro photography of high-quality truffle oil being drizzled onto a perfectly charred pizza crust. The oil catches the golden light, creating glistening droplets. The background is softly blurred, showing a rustic kitchen setting with dark olive tones and warm wood textures, emphasizing a luxurious and artisanal culinary process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0OqtmdISpGZ983pmsl6Enz9HnxsL_rm7UV-gQNgmdEpCXj5Bjx4KGoEuSnrXuxmDqhqYcb5zMlRpkxDLlgSVK0pY1oz-CDFdBokWXx5VRaNn-_Y04FkRd8UDeVSSK69rJnCXWDvPV0YvyyR692t6e0Td8GDSxqD_SrVHt0mxq64kFi1vu001JVaC5LPhWfn6v0NwBHs898xB9VBr6a1Xyt0UzFKwW0mklkiQ85-Jytjxi2KUOb0KFu4Ibkg64d5rHyuKaSWq9tABd"/>
+</div>
+</div>
+<!-- Dough Card -->
+<div class="md:col-span-4 sophisticated-border bg-surface-container p-8 flex flex-col justify-center">
+<div class="mb-6">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4" style="font-variation-settings: 'wght' 200;">bakery_dining</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Living Dough</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Our dough undergoes a 48-hour slow fermentation process, using only '00' flour and natural yeast. The result? A crust that is light, airy, and remarkably digestible.
+                            </p>
+</div>
+<img alt="Fresh Dough" class="w-full aspect-video object-cover rounded-sm grayscale-[30%]" data-alt="Artisan baker's hands dusted with white flour as they gently stretch a fresh ball of pizza dough. The lighting is soft and natural, coming from a side window, highlighting the texture of the dough and the rustic countertop. The aesthetic is clean, minimalist, and focused on the craftsmanship of traditional Italian baking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVn2ldAMsEhIfarx9vBwrkLxvrc2sbtfl7ThtbNM8mX0seVG-WpLnkPWndg-JePcHCmHacMRM4WBk7DPDlu7B6tmmUi7XrJxu9taXO7BbdZvKGX8XFtxrHKVkzo1C8vVbrZ7D1sEeeBHPg8lipOrRale9yUNMobZu8tu_qg9g-hxLFjK2Mv8EPyPdITzkbmPE-71vAyIuKjVsUD9MRxTG81dfC_bHeVffvoXPuh0qnOdNs22fXCL4OBO1317u_hD-wRDwqqI0rl8jy"/>
+</div>
+<!-- Street View Card -->
+<div class="md:col-span-4 sophisticated-border bg-primary text-on-primary p-8 flex flex-col">
+<h3 class="font-headline-sm text-headline-sm mb-4">A Modern Landmark</h3>
+<p class="font-body-md text-body-md opacity-90 mb-8">
+                            Located in the bustling heart of Dhaka 1212, our exterior is a statement of urban elegance. A minimalist facade that promises a warm sanctuary within.
+                        </p>
+<div class="mt-auto">
+<img alt="Ciao Dhaka Exterior" class="w-full aspect-[4/3] object-cover rounded brightness-90" data-alt="The exterior storefront of Ciao Dhaka restaurant at twilight. The building features clean architectural lines, large glass windows revealing a warm golden interior, and a minimalist black sign with elegant white typography. The street view shows a clean, quiet neighborhood in Dhaka 1212 with soft street lamp lighting, creating an inviting and premium urban vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAeWIVwZOM6zKl0fpatzyo8h2CVv_Y96n7xOityI4iDXGgSafWSscVPnk0jAbM9d6z46wAjwmZCo00u-xhlfHCOx10nXQyfGQvjeQQWcZDX16jFpbvPGWPEdzz_jbRW2LnI4Eny3NS8HH69WxG1oU7DdGa2Y3h0DIHRYExw1p2KeqxyAtCiKdvQoTRgc8pwkfm-4A0FsxYXPNdkSQSj42xMT6SM6L3bER3hiBR8LkWVDYEPvRfCtyMc6z7NcpftfwySrlo_xq1b9Bs"/>
+</div>
+</div>
+<!-- CTA Foodpanda -->
+<div class="md:col-span-8 bg-tertiary-container text-on-tertiary-container p-12 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-tertiary/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 w-full md:w-2/3">
+<h3 class="font-display-lg-mobile text-display-lg-mobile mb-4">Craving the Crunch?</h3>
+<p class="font-body-lg text-body-lg mb-6 opacity-90">
+                                Get your favorite artisanal pizza delivered straight to your door. Fresh from our wood-fired oven to your table.
+                            </p>
+<a class="inline-block bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:scale-105 transition-transform" href="https://www.foodpanda.com.bd">
+                                Order via Foodpanda
+                            </a>
+</div>
+<div class="relative z-10 w-full md:w-1/3">
+<span class="material-symbols-outlined text-[120px] opacity-20 block text-right">delivery_dining</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Contact Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-padding-desktop">
+<div class="flex flex-col md:flex-row gap-16">
+<!-- Info Column -->
+<div class="w-full md:w-1/3 space-y-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Visit Us</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+<p class="font-body-md text-body-md">
+                                    House 18 Road No 10A,<br/>
+                                    Dhaka 1212, Bangladesh
+                                </p>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">call</span>
+<p class="font-body-md text-body-md">01791-940409</p>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Hours</h2>
+<ul class="space-y-3">
+<li class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-label-md text-label-md">Monday - Sunday</span>
+<span class="font-body-md text-body-md">12:00 PM - 10:30 PM</span>
+</li>
+</ul>
+</div>
+<div class="p-6 bg-surface-container-high rounded border border-secondary/5">
+<p class="font-label-md text-label-md text-secondary uppercase mb-2">Note</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                            Last order is taken at 10:00 PM to ensure every pizza receives the care it deserves before closing.
+                        </p>
+</div>
+</div>
+<!-- Map Column -->
+<div class="w-full md:w-2/3">
+<div class="h-[500px] w-full bg-surface-variant relative rounded overflow-hidden sophisticated-border">
+<div class="absolute inset-0 grayscale opacity-40 mix-blend-multiply" style="background: radial-gradient(circle, transparent 20%, #fcf9f8 80%);"></div>
+<!-- Mock Map Background -->
+<img alt="Map Location" class="w-full h-full object-cover grayscale brightness-110" data-alt="A stylized, top-down map view of a modern urban neighborhood in Dhaka, Bangladesh. The map uses a minimalist color palette of soft greys, olive greens, and parchment whites. A single elegant red pin marks the location of Ciao Dhaka. The aesthetic is inspired by high-end boutique travel guides, clean and sophisticated." data-location="Dhaka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeNGT-wHu3bG6X2FNBwCqRlS7pbJ5BBQsTNesmrT0kZHT5_rLACF6RM2Fpf3U5B83oe4j7MQzSudw9qgpZpfVcm77ioVntGg95eL8KcFyPJ6C3ZDUR3Y4pSCt_lEq1QhPZfnzynZwaCWfT8qeptpt5EdC5CUcvdeeeRtMI0AQFZdUjJhXYCiqMU_MDSuwLqqpLuwm8P-tN3WdWxYMuBnJjb2rIYSb-V4FZVGbjGKetAMoK_hRGYoyr7hnJvd3omp959ml1nmMQO6Ah"/>
+<!-- Floating Card on Map -->
+<div class="absolute bottom-8 left-8 bg-surface/95 backdrop-blur-md p-6 sophisticated-border shadow-lg max-w-xs">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Ciao Dhaka</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-4">House 18, Road 10A</p>
+<a class="bg-secondary text-on-secondary px-4 py-2 text-center block rounded-full font-label-md text-label-md" href="https://maps.google.com" target="_blank">
+                                Get Directions
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start gap-unit bg-surface-container-highest border-t border-secondary/20">
+<div class="max-w-xs">
+<span class="font-display-lg-mobile text-display-lg-mobile text-secondary block mb-4">Ciao Dhaka</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Authentic wood-fired pizza and traditional Italian recipes crafted with passion in the heart of Dhaka.
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-16 md:gap-32 mt-12 md:mt-0">
+<div class="space-y-4">
+<p class="font-label-md text-label-md text-primary font-bold uppercase tracking-widest">Connect</p>
+<nav class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="https://www.foodpanda.com.bd">Foodpanda Order</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:underline decoration-tertiary underline-offset-4" href="#">Privacy Policy</a>
+</nav>
+</div>
+<div class="space-y-4">
+<p class="font-label-md text-label-md text-primary font-bold uppercase tracking-widest">Follow</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-secondary/20 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-secondary/20 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-secondary/10 mt-16 pt-8 text-center md:text-left">
+<p class="font-label-md text-label-md text-on-surface-variant opacity-60">© 2024 Ciao Dhaka. Authentic Italian Cuisine.</p>
+</div>
+</footer>
+<script>
+        // Simple atmospheric interaction
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            // Subtly shift grain opacity for a "shimmer" effect
+            const grain = document.querySelector('.grain-overlay');
+            if (grain) {
+                grain.style.opacity = 0.02 + (x * 0.02);
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+
+        // Nav slider underline
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.nav-slider');
+            const activeLink = document.querySelector('.nav-link.active');
+            if (slider && activeLink) {
+                slider.style.width = activeLink.offsetWidth + 'px';
+                slider.style.transform = 'translateX(' + activeLink.offsetLeft + 'px)';
+            }
+        });
+
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburger = document.getElementById('hamburger-btn');
+            var mobileMenu = document.getElementById('mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    if (mobileMenu.style.maxHeight === '0px' || !mobileMenu.style.maxHeight) {
+                        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+                    } else {
+                        mobileMenu.style.maxHeight = '0px';
+                    }
+                });
+            }
+        });
+    </script>
+</body></html>
